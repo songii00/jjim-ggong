@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name="push", url = "${alarm.push.host}/bot${alarm.push.tocken}")
+@FeignClient(name="push", url = "${alarm.host}/bot${alarm.token}")
 public interface AlarmPushClient {
 
     @GetMapping("/sendmessage")

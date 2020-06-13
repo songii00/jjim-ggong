@@ -1,5 +1,6 @@
 
+# 텔레그램 api
 alarm:
-  push:
     host: https://api.telegram.org
-    tocken: 1009377497:AAELjo_UxoXPOc-kXH4ZPFKQz1Wyq6HVy1Q
+    token: 1009377497:AAELjo_UxoXPOc-kXH4ZPFKQz1Wyq6HVy1Q
+    username: jjimggong_bot

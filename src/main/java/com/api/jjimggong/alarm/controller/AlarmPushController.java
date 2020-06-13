@@ -18,9 +18,14 @@ public class AlarmPushController {
         this.alarmPushService = alarmPushService;
     }
 
+    /**
+     * 알림 메시지 푸쉬
+     * @param message
+     * @return
+     */
     @GetMapping("/{message}")
     public AlarmDto.Response pushAlarm(@PathVariable String message){
-        alarmPushService.push(new MemberDto("1076526392", "송이"),"안녕");
+        alarmPushService.push(new MemberDto("1076526392", "송이"),message);
         return AlarmDto.Response.SUCCESS();
     }
 
