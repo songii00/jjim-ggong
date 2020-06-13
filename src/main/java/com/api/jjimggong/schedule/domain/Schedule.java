@@ -1,4 +1,4 @@
-package com.api.jjimggong.model;
+package com.api.jjimggong.schedule.domain;
 
 import org.hibernate.annotations.UpdateTimestamp;
 

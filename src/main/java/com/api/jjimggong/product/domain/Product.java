@@ -1,10 +1,10 @@
-package com.api.jjimggong.model;
+package com.api.jjimggong.product.domain;
 
+import com.api.jjimggong.push.domain.Push;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +31,6 @@ public class Product {
     private LocalDate reserveEndDate;
 
     @OneToMany(mappedBy = "product")
-    private List<Alarm> alarms = new ArrayList<>();
+    private List<Push> pushes = new ArrayList<>();
 
 }

@@ -1,14 +1,15 @@
-package com.api.jjimggong.model;
+package com.api.jjimggong.push.domain;
 
+import com.api.jjimggong.member.domain.Member;
+import com.api.jjimggong.product.domain.Product;
+import com.api.jjimggong.tag.domain.Tag;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-public class Alarm {
+public class Push {
 
     @Id @GeneratedValue
     @Column(name = "alarm_id")
@@ -33,19 +34,4 @@ public class Alarm {
     @CreationTimestamp
     private LocalDateTime registerDateTime;
 
-
- /*   public void addTag(Tag tag){
-        if(tags == null){
-            tags = new ArrayList<>();
-        }
-        tags.add(tag);
-    }
-
-    public void addProduct(Product product){
-        if(products == null){
-            products = new ArrayList<>();
-        }
-        products.add(product);
-    }
-*/
 }

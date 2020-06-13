@@ -1,4 +1,6 @@
-package com.api.jjimggong.model;
+package com.api.jjimggong.tag.domain;
+
+import com.api.jjimggong.push.domain.Push;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -20,6 +22,6 @@ public class Tag {
     private String relatedTagName;
 
     @OneToMany(mappedBy = "tag")
-    private List<Alarm> alarms = new ArrayList<>();
+    private List<Push> pushes = new ArrayList<>();
 
 }
