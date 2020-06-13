@@ -1,22 +1,21 @@
-package com.api.jjimggong.push.service;
+package com.api.jjimggong.alarm.service;
 
 import com.api.jjimggong.member.dto.MemberDto;
-import com.api.jjimggong.push.service.PushClient;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Service
-public class PushService {
+public class AlarmPushService {
 
     @Autowired
-    private PushClient pushClient;
+    private AlarmPushClient alarmPushClient;
 
     public void push(MemberDto Member, String message){
-        pushClient.push(Member.getMemberId(), message);
+        alarmPushClient.push(Member.getMemberId(), message);
     }
 }

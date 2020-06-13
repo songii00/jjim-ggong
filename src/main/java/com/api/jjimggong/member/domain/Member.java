@@ -1,6 +1,6 @@
 package com.api.jjimggong.member.domain;
 
-import com.api.jjimggong.push.domain.Push;
+import com.api.jjimggong.alarm.domain.Alarm;
 import lombok.Getter;
 
 import javax.persistence.*;
@@ -19,9 +19,9 @@ public class Member {
     private String clientId;
 
     @OneToMany(mappedBy = "member")
-    private List<Push> pushes = new ArrayList<>();
+    private List<Alarm> alarms = new ArrayList<>();
 
-    public void addAlarm(Push push){
-        pushes.add(push);
+    public void addAlarm(Alarm alarm){
+        alarms.add(alarm);
     }
 }

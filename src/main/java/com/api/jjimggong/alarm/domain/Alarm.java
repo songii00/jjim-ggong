@@ -1,4 +1,4 @@
-package com.api.jjimggong.push.domain;
+package com.api.jjimggong.alarm.domain;
 
 import com.api.jjimggong.member.domain.Member;
 import com.api.jjimggong.product.domain.Product;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Push {
+public class Alarm {
 
     @Id @GeneratedValue
     @Column(name = "alarm_id")
