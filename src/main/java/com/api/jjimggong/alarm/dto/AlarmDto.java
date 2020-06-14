@@ -44,8 +44,6 @@ public class AlarmDto {
         }
     }
 
-
-
     @AllArgsConstructor
     @Getter
     public static class Response {
@@ -55,5 +53,9 @@ public class AlarmDto {
         public static Response SUCCESS(){
             return new Response(0, "success");
         }
+
+        public static Response FAIL() { return new Response(9999, "fail");}
+
+        public static Response FAIL(String errorMessage) { return new Response(9999, errorMessage);}
     }
 }
